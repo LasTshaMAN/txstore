@@ -23,9 +23,7 @@ type Store struct {
 func NewStore() *Store {
 	return &Store{
 		transactions: []transaction{
-			{
-				state: make(map[string]string),
-			},
+			{},
 		},
 	}
 }
