@@ -33,7 +33,7 @@ func (s *Store) Set(key, value string) {
 }
 
 func (s *Store) Get(key string) string {
-	for txIdx := s.openTxCnt; txIdx >= 0; txIdx-- {
+	for txIdx := s.openTxCnt; txIdx >= 1; txIdx-- {
 		value, ok := s.transactions[txIdx].state[key]
 		if !ok {
 			continue
